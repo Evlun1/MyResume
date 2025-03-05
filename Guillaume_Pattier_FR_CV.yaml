@@ -1,0 +1,209 @@
+cv:
+  name: Guillaume Pattier
+  location: Paris
+  email: guillaume.pattier@outlook.com
+  phone: +33-6-44-89-82-00
+  social_networks:
+    - network: LinkedIn
+      username: guillaume-pattier
+    - network: GitHub
+      username: evlun1
+  sections:
+    objectif:
+      - Après 5 années d'expériences dans la data à travers des postes de data analyst jusque développeur full stack,
+        je suis à la recherche d'un poste de tech lead data dans un domaine lié à la transition écologique à partir de janvier 2026.
+    expérience professionnelle:
+      - company: Polyconseil
+        position: Consultant data
+        location: Paris
+        start_date: 2020-01
+        end_date: present
+        highlights:
+          - '**4 missions longues (→)** chez 3 clients (Allianz Trade, Allianz France & Canal+)'
+          - Réalisation d'un [test technique](https://players.data.polyprojects.fr/docs) 
+            de recrutement orienté data engineer
+          - Dev d'un module authentification OIDC & droits IAM pour GitlabCI & AWS en Terraform
+          - '**Manager RH de 4 data scientists** confirmés, suivi régulier et entretiens annuels'
+#          - Participation à 2 appels d'offres, dont un remporté
+      - company: → Allianz Trade
+        position: Data platform full stack developer
+        location: Paris
+        start_date: 2023-07
+        highlights:
+          - Développement & maintenance d'une **plateforme data** sur mesure pour **80 DS**
+          - Gestion flux d'**alimentation des données** & data gouvernance
+          - Mise à disposition de VMs de calcul Linux via un front end custom
+          - Réalisation d'un **feature store** offline & online pour les DS et les modèles en production
+          - Écriture & export de doc utilisateur (tutoriels, données sources, features, etc.)
+          - Support des applications et de l'infrastructure déployée sur **Cloud AWS**
+          - '*Python, Git, GitLab CI, AWS, Terraform, FastAPI, SQL (PostGre, Athena, DBT), Docker, Linux*'  # React TS
+      - company: → Allianz Trade
+        position: Data Scientist & Tester
+        location: Paris
+        start_date: 2022-10
+        end_date: 2023-07
+        highlights:
+          - '**Développement & migration de features** existantes (~25) vers une nouvelle plateforme data avec un feature store custom'
+#          - Beta test et retours utilisateur de nouvelles fonctionnalités techniques
+#          - Onboarding des DS internes sur la plateforme
+          - '*Python, PySpark, Pandas, Git, AWS*'
+      - company: → Allianz France
+        position: Big Data Developer
+        location: Paris
+        start_date: 2021-01
+        end_date: 2022-09
+        highlights:
+          - Développement & alimentation d'un **reporting d'utilisation des espaces clients Web**
+          - Maintenance en production & évolution d'une application de **contrôle de nouveaux contrats** souscrits (70 scénarii de contrôle, impact financier estimé 2m€/an)
+          - Améliorations du traitement automatisé de mails selon le périmètre métier
+          - '*Python, PySpark, Luigi, Git, Gitlab CI, Metabase, SQL (PostGre), Ansible, Helm*'
+      - company: → Canal+
+        position: Data Analyst
+        location: Paris
+        start_date: 2020-01
+        end_date: 2021-01
+        highlights:
+          - '**Accompagnement stratégique** des équipes marketing & service client Canal+'
+          - Suivi des campagnes marketing, réalisation d'A/B tests
+          - 'Prévention du churn : identification clients fragiles, recommandations'
+#          - Recommandations de contenus aux utilisateurs sur la base de tags
+          - Étude irritants service client via analyses NLP
+#          - Développement d'un **modèle de prévision du nombre d'appels** entrants mensuels
+          - '*Python, SQL (Teradata, Redshift), Pandas, Jupyter Notebooks, PowerPoint, Excel*'
+      - company: Chronolife
+        position: Data Scientist, Ingénieur TNS
+        location: Paris
+        start_date: 2019-04
+        end_date: 2019-09
+        highlights:
+          - Détection de chutes de patients porteurs d'un t-shirt connecté avec un accéléromètre
+          - Contribution au développement de l'application mobile
+#      - company: Daifuku BCS
+#        position: Développeur
+#        location: Auckland, NZ
+#        start_date: 2018-01
+#        end_date: 2018-07
+#        highlights:
+#          - Développement de nouveaux modules C# d'une application de simulation logistique
+#          - Création de simulations de logistique aéroportuaire (CDG2, Kuala Lumpur, ...)
+#      - company: Syrlinks
+#        position: Ingénieur électronique FPGA
+#        location: Auckland, NZ
+#        start_date: 2017-07
+#        end_date: 2017-12
+#        highlights:
+#          - Réalisation d'un décodeur canal LDPC compatible TV satellite sur carte FPGA
+#          - Update d'un simulateur en C et synthèse sur carte en VHDL
+      - company: Enedis
+        position: Stagiaire en observation
+        location: Le Mans
+        date: 2016-07
+        highlights:
+          - Suivi d'une équipe de maintenance opérationnelle du réseau Enedis
+    formation:
+      - institution: Supélec
+        area: Électronique, Énergie, Informatique
+        degree: Ingénieur
+        start_date: 2015
+        end_date: 2019
+        highlights:
+          - Spécialisation en électronique numérique, télécom & traitement d'images
+          - Césure d'une année de stages longs en 2018
+      - institution: Solutions Architect Associate
+        area: Cloud engineering
+        degree: Certificat AWS
+        date: 2023-02
+      - institution: Fresque Du Climat
+        area: serious game d'introduction au changement climatique
+        degree: Formateur
+        date: 2022-09
+    compétences:
+      - label: Langages
+        details: Python, SQL, TypeScript, English (fluent)  # English is a language after all, right ? :)
+      - label: Librairies
+        details: Pandas, PySpark, Luigi, FastAPI, Pydantic, SQLAlchemy, DBT, Sklearn
+      - label: DevOps
+        details: Git, GitLab CI, AWS, Terraform, Ansible, Docker, Bash
+      - label: Outils
+        details: Metabase, PowerBI, Machine Learning, PowerPoint, Excel
+      - label: Soft Skills
+        details: Adaptabilité, Pédagogie, Présentations, Proactif, Résolution de problèmes
+    loisirs:
+      - Jeux de cartes (bridge), jeux de société, jeux vidéos  # Particularly puzzle games : Portal 2, The Talos Principle, Outer Wilds are among favorites
+      - Cyclisme, escalade, randonnée
+      - Lecture (Fantasy, SF)  # If you want recommendations : The Liveship Trilogy (Robin Hobb), Latium (Romain Lucazeau)
+
+
+design:
+  theme: classic
+  font: Source Sans 3
+  font_size: 10pt
+  page_size: letterpaper
+  color: '#004f90'
+  disable_external_link_icons: false
+  disable_page_numbering: false
+  page_numbering_style: NAME - Page PAGE_NUMBER / TOTAL_PAGES
+  disable_last_updated_date: false
+  last_updated_date_style: TODAY
+  header_font_size: 30 pt
+  text_alignment: justified
+  seperator_between_connections: ''
+  use_icons_for_connections: true
+  margins:
+    page:
+      top: 2 cm
+      bottom: 2 cm
+      left: 2 cm
+      right: 2 cm
+    section_title:
+      top: 0.3 cm
+      bottom: 0.2 cm
+    entry_area:
+      left_and_right: 0.2 cm
+      vertical_between: 0.2 cm
+      date_and_location_width: 3.5 cm
+      education_degree_width: 2.5 cm
+    highlights_area:
+      top: 0.10 cm
+      left: 0.4 cm
+      vertical_between_bullet_points: 0.10 cm
+    header:
+      vertical_between_name_and_connections: 0.3 cm
+      bottom: 0.3 cm
+      horizontal_between_connections: 0.5 cm
+  show_timespan_in: []
+
+locale_catalog:
+  phone_number_format: national
+  date_style: "MONTH_ABBREVIATION YEAR"
+  abbreviations_for_months: # translation of the month abbreviations
+    - Jan
+    - Fev
+    - Mar
+    - Avr
+    - Mai
+    - Juin
+    - Juil
+    - Août
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+  full_names_of_months: # translation of the full month names
+    - Janvier
+    - Février
+    - Mars
+    - Avril
+    - Mai
+    - Juin
+    - Juillet
+    - Août
+    - Septembre
+    - Octobre
+    - Novembre
+    - Decembre
+  month: mois      # translation of the word "month"
+  months: mois    # translation of the word "months"
+  year: an        # translation of the word "year"
+  years: ans      # translation of the word "years"
+  present: présent  # translation of the word "present"

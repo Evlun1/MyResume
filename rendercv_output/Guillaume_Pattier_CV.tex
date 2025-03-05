@@ -1,0 +1,433 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Guillaume Pattier's CV},
+    pdfauthor={Guillaume Pattier},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Guillaume Pattier - Page \thepage{} / \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 3.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{2.5 cm, \fill, 3.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Avril 2025}\hspace{\widthof{Avril 2025}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \fontsize{30 pt}{30 pt}
+        \textbf{Guillaume Pattier}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Paris}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:guillaume.pattier@outlook.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}guillaume.pattier@outlook.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+33-6-44-89-82-00}{{\footnotesize\faPhone*}\hspace*{0.13cm}06 44 89 82 00}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/guillaume-pattier}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}guillaume-pattier}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/evlun1}{{\footnotesize\faGithub}\hspace*{0.13cm}evlun1}}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
+    \section{Objectif}
+
+
+
+        
+        \begin{onecolentry}
+            Après 5 années d'expériences dans la data à travers des postes de data analyst jusque développeur full stack, je suis à la recherche d'un poste de tech lead data dans un domaine lié à la transition écologique à partir de janvier 2026.
+        \end{onecolentry}
+
+
+    
+    \section{Expérience Professionnelle}
+
+
+
+        
+        \begin{twocolentry}{
+            Paris
+
+        Jan 2020 – présent
+        }
+            \textbf{Polyconseil}, Consultant data
+            \begin{highlights}
+                \item \textbf{4 missions longues (→)} chez 3 clients (Allianz Trade, Allianz France \& Canal+)
+                \item Réalisation d'un \href{https://players.data.polyprojects.fr/docs}{test technique} de recrutement orienté data engineer
+                \item Dev d'un module authentification OIDC \& droits IAM pour GitlabCI \& AWS en Terraform
+                \item \textbf{Manager RH de 4 data scientists} confirmés, suivi régulier et entretiens annuels
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Paris
+
+        Juil 2023 – présent
+        }
+            \textbf{→ Allianz Trade}, Data platform full stack developer
+            \begin{highlights}
+                \item Développement \& maintenance d'une \textbf{plateforme data} sur mesure pour \textbf{80 DS}
+                \item Gestion flux d'\textbf{alimentation des données} \& data gouvernance
+                \item Mise à disposition de VMs de calcul Linux via un front end custom
+                \item Réalisation d'un \textbf{feature store} offline \& online pour les DS et les modèles en production
+                \item Écriture \& export de doc utilisateur (tutoriels, données sources, features, etc.)
+                \item Support des applications et de l'infrastructure déployée sur \textbf{Cloud AWS}
+                \item \textit{Python, Git, GitLab CI, AWS, Terraform, FastAPI, SQL (PostGre, Athena, DBT), Docker, Linux}
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Paris
+
+        Oct 2022 – Juil 2023
+        }
+            \textbf{→ Allianz Trade}, Data Scientist \& Tester
+            \begin{highlights}
+                \item \textbf{Développement \& migration de features} existantes (\textasciitilde{}25) vers une nouvelle plateforme data avec un feature store custom
+                \item \textit{Python, PySpark, Pandas, Git, AWS}
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Paris
+
+        Jan 2021 – Sep 2022
+        }
+            \textbf{→ Allianz France}, Big Data Developer
+            \begin{highlights}
+                \item Développement \& alimentation d'un \textbf{reporting d'utilisation des espaces clients Web}
+                \item Maintenance en production \& évolution d'une application de \textbf{contrôle de nouveaux contrats} souscrits (70 scénarii de contrôle, impact financier estimé 2m€/an)
+                \item Améliorations du traitement automatisé de mails selon le périmètre métier
+                \item \textit{Python, PySpark, Luigi, Git, Gitlab CI, Metabase, SQL (PostGre), Ansible, Helm}
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Paris
+
+        Jan 2020 – Jan 2021
+        }
+            \textbf{→ Canal+}, Data Analyst
+            \begin{highlights}
+                \item \textbf{Accompagnement stratégique} des équipes marketing \& service client Canal+
+                \item Suivi des campagnes marketing, réalisation d'A/B tests
+                \item Prévention du churn : identification clients fragiles, recommandations
+                \item Étude irritants service client via analyses NLP
+                \item \textit{Python, SQL (Teradata, Redshift), Pandas, Jupyter Notebooks, PowerPoint, Excel}
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Paris
+
+        Avr 2019 – Sep 2019
+        }
+            \textbf{Chronolife}, Data Scientist, Ingénieur TNS
+            \begin{highlights}
+                \item Détection de chutes de patients porteurs d'un t-shirt connecté avec un accéléromètre
+                \item Contribution au développement de l'application mobile
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Le Mans
+
+        Juil 2016
+        }
+            \textbf{Enedis}, Stagiaire en observation
+            \begin{highlights}
+                \item Suivi d'une équipe de maintenance opérationnelle du réseau Enedis
+            \end{highlights}
+        \end{twocolentry}
+
+
+
+    
+    \section{Formation}
+
+
+
+        
+        \begin{threecolentry}{\textbf{Ingénieur}}{
+            2015 – 2019
+        }
+            \textbf{Supélec}, Électronique, Énergie, Informatique
+            \begin{highlights}
+                \item Spécialisation en électronique numérique, télécom \& traitement d'images
+                \item Césure d'une année de stages longs en 2018
+            \end{highlights}
+        \end{threecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{threecolentry}{\textbf{Certificat AWS}}{
+            Fev 2023
+        }
+            \textbf{Solutions Architect Associate}, Cloud engineering
+        \end{threecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{threecolentry}{\textbf{Formateur}}{
+            Sep 2022
+        }
+            \textbf{Fresque Du Climat}, serious game d'introduction au changement climatique
+        \end{threecolentry}
+
+
+    
+    \section{Compétences}
+
+
+
+        
+        \begin{onecolentry}
+            \textbf{Langages:} Python, SQL, TypeScript, English (fluent)
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Librairies:} Pandas, PySpark, Luigi, FastAPI, Pydantic, SQLAlchemy, DBT, Sklearn
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{DevOps:} Git, GitLab CI, AWS, Terraform, Ansible, Docker, Bash
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Outils:} Metabase, PowerBI, Machine Learning, PowerPoint, Excel
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Soft Skills:} Adaptabilité, Pédagogie, Présentations, Proactif, Résolution de problèmes
+        \end{onecolentry}
+
+
+    
+    \section{Loisirs}
+
+
+
+        
+        \begin{onecolentry}
+            Jeux de cartes (bridge), jeux de société, jeux vidéos
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            Cyclisme, escalade, randonnée
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            Lecture (Fantasy, SF)
+        \end{onecolentry}
+
+
+    
+
+\end{document}
