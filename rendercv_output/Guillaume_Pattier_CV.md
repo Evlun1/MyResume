@@ -89,6 +89,25 @@ Après 5 années d'expériences dans la data à travers des postes de data analy
 
 - Sep 2022
 
+# Projets Personnels
+
+## Rain O Meter
+
+- → [GitHub](https://github.com/Evlun1/rain_o_meter)
+- A t'il vraiment *tant* plu que ça ces derniers temps ?
+- Application Python FastAPI pour requêter les données pluviométriques MétéoFrance et les comparer aux normales saisonnières
+- Focus clean code & réutilisabilité
+
+## Advent Of Codes
+
+- → [GitHub](https://github.com/Evlun1/advent_of_codes)
+- Mes solutions aux challenges Advent Of Code 2022, 2023 & 2024
+
+## RTM Shared Save
+
+- → [GitHub](https://github.com/Evlun1/lotrrtm_shared_save)
+- Application Python FastAPI déployée sur AWS pour partager des fichiers de sauvegarde du jeu vidéo Return To Moria
+
 # Compétences
 
 - Langages: Python, SQL, TypeScript, English (fluent)

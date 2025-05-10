@@ -117,6 +117,21 @@ cv:
         area: serious game d'introduction au changement climatique
         degree: Formateur
         date: 2022-09
+    projets personnels:
+      - name: Rain O Meter
+        location: → [GitHub](https://github.com/Evlun1/rain_o_meter)
+        highlights:
+          - A t'il vraiment *tant* plu que ça ces derniers temps ?
+          - Application Python FastAPI pour requêter les données pluviométriques MétéoFrance et les comparer aux normales saisonnières
+          - Focus clean code & réutilisabilité
+      - name: Advent Of Codes
+        location: → [GitHub](https://github.com/Evlun1/advent_of_codes)
+        highlights:
+          - Mes solutions aux challenges Advent Of Code 2022, 2023 & 2024
+      - name: RTM Shared Save
+        location: → [GitHub](https://github.com/Evlun1/lotrrtm_shared_save)
+        highlights:
+          - Application Python FastAPI déployée sur AWS pour partager des fichiers de sauvegarde du jeu vidéo Return To Moria
     compétences:
       - label: Langages
         details: Python, SQL, TypeScript, English (fluent)  # English is a language after all, right ? :)
