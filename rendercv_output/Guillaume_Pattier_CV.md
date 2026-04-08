@@ -9,7 +9,7 @@
 
 # Objectif
 
-Après 5 années d'expériences dans la data à travers des postes de data analyst jusque développeur full stack, je suis à la recherche d'un poste de tech lead data dans un domaine lié à la transition écologique à partir de janvier 2026.
+Après 5 années d'expériences dans la data à travers des postes de data analyst jusque développeur full stack, je suis à la recherche d'un poste de tech lead data dans un domaine lié à la transition écologique.
 
 # Expérience Professionnelle
 
@@ -17,16 +17,24 @@ Après 5 années d'expériences dans la data à travers des postes de data analy
 
 - Jan 2020 – présent
 - Paris
-- **4 missions longues (→)** chez 3 clients (Allianz Trade, Allianz France & Canal+)
+- **5 missions longues (→)** chez 4 clients (Hachette, Allianz Trade, Allianz France & Canal+)
+- **"Talent Manager" de 4 data scientists** confirmés, suivi régulier et entretiens annuels
 - Réalisation d'un [test technique](https://players.data.polyprojects.fr/docs) de recrutement orienté data engineer
-- Dev d'un module authentification OIDC & droits IAM pour GitlabCI & AWS en Terraform
-- **Manager RH de 4 data scientists** confirmés, suivi régulier et entretiens annuels
+
+## → Hachette, Data Architect
+
+- Jan 2026 – présent
+- Paris
+- Élaboration chiffrage et stratégie de **migration d'une plateforme data legacy**
+- Contribution aux documents de cahier des charges (RfP) éditeur & intégrateur
+- **Notation et synthèse** des propositions éditeur
+- *AWS (SageMaker), Azure (Fabric), GCP (BigQuery), Databricks, Snowflake*
 
 ## → Allianz Trade, Data platform full stack developer
 
-- Juil 2023 – présent
+- Oct 2022 – Juil 2025
 - Paris
-- Développement & maintenance d'une **plateforme data** sur mesure pour **80 DS**
+- Développement & maintenance d'une **plateforme data** sur mesure pour **100 DS**
 - Gestion flux d'**alimentation des données** & data gouvernance
 - Mise à disposition de VMs de calcul Linux via un front end custom
 - Réalisation d'un **feature store** offline & online pour les DS et les modèles en production
@@ -34,21 +42,14 @@ Après 5 années d'expériences dans la data à travers des postes de data analy
 - Support des applications et de l'infrastructure déployée sur **Cloud AWS**
 - *Python, Git, GitLab CI, AWS, Terraform, FastAPI, SQL (PostGre, Athena, DBT), Docker, Linux*
 
-## → Allianz Trade, Data Scientist & Tester
-
-- Oct 2022 – Juil 2023
-- Paris
-- **Développement & migration de features** existantes (~25) vers une nouvelle plateforme data avec un feature store custom
-- *Python, PySpark, Pandas, Git, AWS*
-
 ## → Allianz France, Big Data Developer
 
 - Jan 2021 – Sep 2022
 - Paris
 - Développement & alimentation d'un **reporting d'utilisation des espaces clients Web**
-- Maintenance en production & évolution d'une application de **contrôle de nouveaux contrats** souscrits (70 scénarii de contrôle, impact financier estimé 2m€/an)
+- Maintenance en production & évolution d'une application de **contrôle de nouveaux contrats** souscrits (70 scénarii de contrôle, impact financier estimé 2M€/an)
 - Améliorations du traitement automatisé de mails selon le périmètre métier
-- *Python, PySpark, Luigi, Git, Gitlab CI, Metabase, SQL (PostGre), Ansible, Helm*
+- *Python, PySpark, Luigi, Git, Gitlab CI, Metabase, SQL (PostGre)*
 
 ## → Canal+, Data Analyst
 
@@ -112,7 +113,7 @@ Après 5 années d'expériences dans la data à travers des postes de data analy
 
 - Langages: Python, SQL, TypeScript, English (fluent)
 - Librairies: Pandas, PySpark, Luigi, FastAPI, Pydantic, SQLAlchemy, DBT, Sklearn
-- DevOps: Git, GitLab CI, AWS, Terraform, Ansible, Docker, Bash
+- DevOps: Git, GitLab CI, AWS, Terraform, Docker, Bash
 - Outils: Metabase, PowerBI, Machine Learning, PowerPoint, Excel
 - Soft Skills: Adaptabilité, Pédagogie, Présentations, Proactif, Résolution de problèmes
 # Loisirs

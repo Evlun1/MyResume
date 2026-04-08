@@ -11,7 +11,7 @@ cv:
   sections:
     objectif:
       - Après 5 années d'expériences dans la data à travers des postes de data analyst jusque développeur full stack,
-        je suis à la recherche d'un poste de tech lead data dans un domaine lié à la transition écologique à partir de janvier 2026.
+        je suis à la recherche d'un poste de tech lead data dans un domaine lié à la transition écologique.
     expérience professionnelle:
       - company: Polyconseil
         position: Consultant data
@@ -19,34 +19,45 @@ cv:
         start_date: 2020-01
         end_date: present
         highlights:
-          - '**4 missions longues (→)** chez 3 clients (Allianz Trade, Allianz France & Canal+)'
+          - '**5 missions longues (→)** chez 4 clients (Hachette, Allianz Trade, Allianz France & Canal+)'
+          - '**"Talent Manager" de 4 data scientists** confirmés, suivi régulier et entretiens annuels'
           - Réalisation d'un [test technique](https://players.data.polyprojects.fr/docs) 
             de recrutement orienté data engineer
-          - Dev d'un module authentification OIDC & droits IAM pour GitlabCI & AWS en Terraform
-          - '**Manager RH de 4 data scientists** confirmés, suivi régulier et entretiens annuels'
+#          - Dev d'un module authentification OIDC & droits IAM pour GitlabCI & AWS en Terraform
 #          - Participation à 2 appels d'offres, dont un remporté
+      - company : → Hachette
+        position: Data Architect
+        location: Paris
+        start_date: 2026-01
+        highlights:
+          - Élaboration chiffrage et stratégie de **migration d'une plateforme data legacy**
+          - Contribution aux documents de cahier des charges (RfP) éditeur & intégrateur
+          - '**Notation et synthèse** des propositions éditeur'
+          - '*AWS (SageMaker), Azure (Fabric), GCP (BigQuery), Databricks, Snowflake*'
       - company: → Allianz Trade
         position: Data platform full stack developer
         location: Paris
-        start_date: 2023-07
+        start_date: 2022-10
+#        start_date: 2023-07
+        end_date: 2025-07
         highlights:
-          - Développement & maintenance d'une **plateforme data** sur mesure pour **80 DS**
+          - Développement & maintenance d'une **plateforme data** sur mesure pour **100 DS**
           - Gestion flux d'**alimentation des données** & data gouvernance
           - Mise à disposition de VMs de calcul Linux via un front end custom
           - Réalisation d'un **feature store** offline & online pour les DS et les modèles en production
           - Écriture & export de doc utilisateur (tutoriels, données sources, features, etc.)
           - Support des applications et de l'infrastructure déployée sur **Cloud AWS**
           - '*Python, Git, GitLab CI, AWS, Terraform, FastAPI, SQL (PostGre, Athena, DBT), Docker, Linux*'  # React TS
-      - company: → Allianz Trade
-        position: Data Scientist & Tester
-        location: Paris
-        start_date: 2022-10
-        end_date: 2023-07
-        highlights:
-          - '**Développement & migration de features** existantes (~25) vers une nouvelle plateforme data avec un feature store custom'
+#      - company: → Allianz Trade
+#        position: Data Scientist & Tester
+#        location: Paris
+#        start_date: 2022-10
+#        end_date: 2023-07
+#        highlights:
+#          - '**Développement & migration de features** existantes (~25) vers une nouvelle plateforme data avec un feature store custom'
 #          - Beta test et retours utilisateur de nouvelles fonctionnalités techniques
 #          - Onboarding des DS internes sur la plateforme
-          - '*Python, PySpark, Pandas, Git, AWS*'
+#          - '*Python, PySpark, Pandas, Git, AWS*'
       - company: → Allianz France
         position: Big Data Developer
         location: Paris
@@ -54,9 +65,9 @@ cv:
         end_date: 2022-09
         highlights:
           - Développement & alimentation d'un **reporting d'utilisation des espaces clients Web**
-          - Maintenance en production & évolution d'une application de **contrôle de nouveaux contrats** souscrits (70 scénarii de contrôle, impact financier estimé 2m€/an)
+          - Maintenance en production & évolution d'une application de **contrôle de nouveaux contrats** souscrits (70 scénarii de contrôle, impact financier estimé 2M€/an)
           - Améliorations du traitement automatisé de mails selon le périmètre métier
-          - '*Python, PySpark, Luigi, Git, Gitlab CI, Metabase, SQL (PostGre), Ansible, Helm*'
+          - '*Python, PySpark, Luigi, Git, Gitlab CI, Metabase, SQL (PostGre)*'
       - company: → Canal+
         position: Data Analyst
         location: Paris
@@ -138,7 +149,7 @@ cv:
       - label: Librairies
         details: Pandas, PySpark, Luigi, FastAPI, Pydantic, SQLAlchemy, DBT, Sklearn
       - label: DevOps
-        details: Git, GitLab CI, AWS, Terraform, Ansible, Docker, Bash
+        details: Git, GitLab CI, AWS, Terraform, Docker, Bash
       - label: Outils
         details: Metabase, PowerBI, Machine Learning, PowerPoint, Excel
       - label: Soft Skills
@@ -158,7 +169,7 @@ design:
   disable_external_link_icons: false
   disable_page_numbering: false
   page_numbering_style: NAME - Page PAGE_NUMBER / TOTAL_PAGES
-  disable_last_updated_date: false
+  disable_last_updated_date: true
   last_updated_date_style: TODAY
   header_font_size: 30 pt
   text_alignment: justified
